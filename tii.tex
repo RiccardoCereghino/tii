@@ -33,29 +33,38 @@
 \usepackage[T1]{fontenc}
 \pagestyle{plain}
 
-%% This bit allows you to either specify only the files which you wish to
-%% process, or `all' to process all files which you \include.
-%% Krishna Sethuraman (1990).
+\PassOptionsToPackage{american,italian}{babel}
+\usepackage{babel}
+\selectlanguage{italian}
 
-\typein [\files]{Enter file names to process, (chap1,chap2 ...), or `all' to
-process all files:}
-\def\all{all}
-\ifx\files\all \typeout{Including all files.} \else \typeout{Including only \files.} \includeonly{\files} \fi
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ntheorem}
+\usepackage{float}
+\usepackage{tikz}
+
+\let\numberset\mathbb
+\newcommand{\N}{\numberset{N}}
+\newcommand{\Z}{\numberset{Z}}
+\newcommand{\Q}{\numberset{Q}}
+\newcommand{\R}{\numberset{R}}
+\newcommand{\C}{\numberset{C}}
+\newcommand{\U}{\numberset{U}}
+\newcommand{\I}{\numberset{I}}
+\newcommand{\PP}{\numberset{P}}
+\newcommand{\CC}{\complement}
+\newcommand{\dom}{\text{dom }}
+\newcommand{\im}{\text{Im }}
+\newcommand{\foi}{\text{f.i.}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\cc}{\mathcal{C}}
+\newcommand{\dd}{\mathrm{d}}
+
 
 \begin{document}
 
 \include{cover}
-% Some departments (e.g. 5) require an additional signature page.  See
-% signature.tex for more information and uncomment the following line if
-% applicable.
-% \include{signature}
 \pagestyle{plain}
 \include{contents}
-\include{chap1}
-\include{chap2}
-\appendix
-\include{appa}
-\include{appb}
-\include{biblio}
+\include{chapters/chapter_01}
 \end{document}
-
