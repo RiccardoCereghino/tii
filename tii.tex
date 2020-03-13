@@ -25,7 +25,8 @@
 %% Page Intentionally Left Blank'', use the ``leftblank'' option, as
 %% above. 
 
-\documentclass[12pt,twoside]{mitthesis}
+\documentclass[8pt,twoside]{mitthesis}
+\linespread{1.1}
 \usepackage{lgrind}
 %% These have been added at the request of the MIT Libraries, because
 %% some PDF conversions mess up the ligatures.  -LB, 1/22/2014
@@ -60,11 +61,17 @@
 \newcommand{\cc}{\mathcal{C}}
 \newcommand{\dd}{\mathrm{d}}
 
+\usepackage{ntheorem}
+\theoremstyle{break}
+
+\newtheorem{definizione}{Definizione}
+\newtheorem{esercizio}{Esercizio}
+
+\usepackage{import}
 
 \begin{document}
-
 \include{cover}
 \pagestyle{plain}
 \include{contents}
-\include{chapters/chapter_01}
+\import{./chapters/}{chapter-01.tex}
 \end{document}

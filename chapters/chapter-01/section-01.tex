@@ -1,0 +1,73 @@
+\section{Definizione assiomatica di probabilità}%
+\label{sec:Definizione assiomatica di probabilità}
+Definiamo la probabilità in modo assiomatico discutento alcune proprietà nel
+caso semplice, ma importante in cui sia possibile individuare eventi
+equiprobabili.
+
+\subsection{Nozioni fondamentali}%
+\label{sub:Nozioni fondamentali}
+\begin{itemize}
+  \item \textbf{Spazio campionario:} è l'insieme $S$ dei possibili risultati di
+    un esperimento;
+  \item \textbf{evento:} è un qualunque sottoinsieme $E$ di $S$ che si realizza
+    se il risultato dell'esperimento appartiene ad $E$.
+\end{itemize}
+
+Indichiamo gli eventi di:
+\begin{itemize}
+  \item \textbf{unione:} come $E\cup F$;
+  \item \textbf{intersezione:} $EF$;
+  \item \textbf{mutualmente esclusivi:} $EF=\emptyset$;
+  \item \textbf{complementare:} $E^C$ tale che $E\cup E^C=S$.
+\end{itemize}
+
+\subsection{Assiomi}%
+\label{sub:Assiomi}
+Una probabilità $P(.)$ risulta ben definita sugli eventi di uno spazio
+campionario $S$ se:
+\begin{equation}
+  \begin{split}
+    A1&:0\leq P(E)\leq1\qquad\forall E\subseteq S\\
+    A2&:P(S)=1\\
+    A3&: \text{se }E_i,i=1,2,\dots \text{mutualmente esclusivi}\rightarrow
+    P(\cup E_i)=\sum_i P(E_i)
+  \end{split}
+\end{equation}
+
+Sono conseguenze di $A1$, $A2$, $A3$:
+\begin{equation}
+  \begin{split}
+    (i)&:\forall E,P(E^C)=1-P(E)\\
+    (ii)&:E\subseteq F\rightarrow P(E)\leq P(F)\qquad\forall E,F\\
+    (iii)&: P(E\cup F)=P(E)+P(F)-P(EF)\qquad\forall E,F
+  \end{split}
+\end{equation}
+
+\subsection{Eventi equiprobabili}%
+\label{sub:Eventi equiprobabili}
+Sia $S$ lo \emph{spazio campionario} costituito da un insieme finito di $N$
+risultati che indichiamo con i primi $\N$ numeri naturali (\emph{cardinalità}),
+ovvero $S=\{1,2,\dots,N\}$, sia $\#S$ la cardinalità dell'insieme.
+Se le probabilità $P(i)$ sono tutte uguali allora $P(\{i\})=\dfrac{1}{N}$.
+
+La probabilità di un insieme $E\subseteq S$ in questo caso sarà:
+\[
+  P(E)=\frac{\#E}{\#S}
+\]
+
+\begin{esercizio}[Ottenere 7 lanciando due dadi]
+
+  \text{Casi possibili}: $6\times6$.
+  \text{Casi favorevoli}: $\{6,1\},\{1,6\},\{5,2\},\{2,5\},\{4,3\},\{3,4\}$.
+  \[
+    P(E)=\frac{\#E}{\#S}=\frac{6}{36}= \frac{1}{6} 
+  \]
+\end{esercizio}
+
+\begin{esercizio}[Due persone nate nello stesso giorno]
+  \text{Casi possibili}: $\#E=365!$.
+  \text{Casi favorevoli}: $\#S=365^{n-1}$. 
+  \[
+    P(E)=\frac{\#E}{\#S}=\frac{365!}{365^{n-1}}
+  \]
+\end{esercizio}

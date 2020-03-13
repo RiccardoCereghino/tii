@@ -447,37 +447,6 @@ reserved.\par\permission}}
 
 %% `upcase' documentclass option: \choosecase is defined either as a dummy or
 %% a macro to change the (expanded) argument to uppercase.
-\def\maketitle{\begin{titlepage}
-\large
-{\def\baselinestretch{1.2}\Large\bf \choosecase{\@title} \par}
-by\par
-{\Large  \choosecase{\@author}}
-\par
-\@prevdegrees
-\par
-\choosecase{Submitted to the} \choosecase{\@department} \\
-\choosecase{in partial fulfillment of the requirements for the}
-\choosecase{\@degreeword} 
-\choosecase{of}
-\par
-\choosecase{\@degree}
-\par
-at the
-\par\MIT\par
-\@degreemonth\ \@degreeyear
-\par
-\@copyrightnotice
-\par
-\vskip 3\baselineskip
-\signature{Author}{\@department \\ \@thesisdate}
-\par
-\vfill
-\unvbox\@titlesupervisor
-\par
-\vfill
-\signature{Accepted by}{\@chairmanname \\ \@chairmantitle}
-\vfill
-\end{titlepage}}
 
 % this environment should probably be called abstract,
 % but we want people to also be able to get at the more

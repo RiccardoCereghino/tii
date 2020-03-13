@@ -1,0 +1,43 @@
+\chapter{Introduzione alla probabilità}%
+\label{cha:Introduzione alla probabilità}
+Lo studio della probabilità ha molteplici utilizzi:
+\begin{itemize}
+  \item analisi e design degli algoritmi;
+  \item \textit{data science}, intelligenza artificiale.
+\end{itemize}
+
+\section{Calcolo combinatorio}%
+\label{sec:Calcolo combinatorio}
+Definiamo un \emph{esperimento} come un operazione che produce dei risultati.
+
+Tipi di esperimenti sono:
+\begin{itemize}
+  \item permutazione;
+  \item disposizione;
+  \item combinazione.
+\end{itemize}
+
+Sia $N$ il numero di elementi di un insieme.
+
+\paragraph{Permutazioni}%
+\label{par:Permutazioni}
+La permutazione rappresenta i possibili ordinamenti di $N$.
+\[
+  P(N)=N!
+\]
+
+\paragraph{Disposizioni}%
+\label{par:Disposizioni}
+La disposizione rappresenta i possibili ordinamenti di $i$ oggetti tra $N$.
+\[
+  D(i,N)= \frac{N!}{(N-i)!} 
+\]
+
+\paragraph{Combinazioni}%
+\label{par:Combinazioni}
+La combinazione rappresenta la scelta di $i$ oggetti da $N$.
+\[
+  C(i,N)= \frac{N!}{i!(N-i)!}
+\]
+
+\subimport{./chapter-01/}{section-01.tex}
