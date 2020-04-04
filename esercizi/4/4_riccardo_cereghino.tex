@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{eurosym}
+
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\inputencoding{utf8}
+
+\begin{document}
+\title{Homework 3}
+\author{Riccardo Cereghino - S4651066}
+\maketitle
+
+\paragraph{4.2}%
+\label{par:4.2}
+Siano $V$ la pallina verde, $B$ la bianca e $R$ la rossa, ed $X$ la vincita (o
+perdita) basata sulla pescata, ovvero la variabile casuale.
+
+\subparagraph{a}%
+\label{subp:a}
+Analizziamo la distribuzione delle vincite e delle perdite in base alle palline
+pescate:
+\begin{itemize}
+  \item per $X=-3$ abbiamo un solo caso, $RRR$;
+  \item $X=-2$ abbiamo il caso $BRR$;
+  \item $X=-1$ abbiamo i casi $BBR$ e $VRR$;
+  \item $X=0$ abbiamo i casi $BBB$ e $VBR$;
+  \item $X=1$ abbiamo i casi $VBB$ e $VVR$;
+  \item $X=2$ il caso $VVB$.
+\end{itemize}
+
+Possiamo quindi disegnare la funzione di probabilità di massa.
+\begin{figure}[ht]
+    \centering
+    \incfig[0.6]{funzione-massa-1}
+    \caption{Funzione di massa}
+    \label{fig:funzione-massa-1}
+\end{figure}
+
+Mentre il valore atteso della vincita sarà dato dalla seguente formula, dove
+$P(i)$ sarà dato dai casi favorevoli per $X=i$ ed i casi possibili ($9$).
+\[
+  \begin{split}
+  E[x]&= \sum^{2}_{i=-3} a_i P(i)=\\
+  &= \frac{-3}{9}-\frac{2}{9}-\frac{2}{9}+\frac{2}{9}+\frac{2}{9}=\\
+  &= \frac{-2}{9} = -0.22\text{\euro}
+  \end{split}
+\]
+
+\subparagraph{b}%
+\label{subp:b}
+Analizziamo la distribuzione delle vincite e delle perdite in base alle palline
+pescate:
+\begin{itemize}
+  \item $X=-2$ abbiamo il caso $BRR$;
+  \item $X=-1$ abbiamo i casi $BBR$ e $VRR$;
+  \item $X=0$ abbiamo i casi $BBB$ e $VBR$;
+  \item $X=1$ abbiamo i casi $VBB$ e $VVR$;
+  \item $X=2$ il caso $VVB$.
+\end{itemize}
+
+Possiamo quindi disegnare la funzione di probabilità di massa.
+\begin{figure}[ht]
+    \centering
+    \incfig[0.6]{funzione-massa-2}
+    \caption{Funzione di massa}
+    \label{fig:funzione-massa-2}
+\end{figure}
+
+Mentre il valore atteso della vincita sarà dato dalla seguente formula, dove
+$P(i)$ sarà dato dai casi favorevoli per $X=i$ ed i casi possibili ($8$).
+\[
+  \begin{split}
+  E[x]&= \sum^{2}_{i=-3} a_i P(i)=\\
+  &= -\frac{2}{8}-\frac{2}{8}+\frac{2}{8}+\frac{2}{8}=0\text{\euro}
+  \end{split}
+\]
+\end{document}

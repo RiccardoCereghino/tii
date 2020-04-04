@@ -43,6 +43,29 @@ Sono conseguenze di $A1$, $A2$, $A3$:
   \end{split}
 \end{equation}
 
+\paragraph{Dimostrazione}%
+\label{par:Dimostrazione}
+$(i)$ La proprietà segue dal fatto che $E^CE=\emptyset$ e $E^C\cup E=S$, quindi
+$P(E)+P(E^C)=1$.
+
+$(ii)$ La proprietà si dimostra notando che $P(EF)=P(E)$ che si può scrivere
+come $F=E\cup E^CF$, da cui possiamo derivare $P(F)=P(E)+\frac{P(E^C F}{\geq0}$.
+
+ $(iii)$
+\[P(A\cup B)=P(A)+P(B)-P(A\cap B)\]
+In primo luogo,
+
+\[P(A\cup B)=P(A)+P(B\setminus A)\]
+ (per il terzo Assioma), quindi,
+\[P(A\cup B)=P(A)+P(B\setminus (A\cap B))\]
+perché
+ \[B\setminus A=B\setminus (A\cap B)\]
+E,
+\[P(B)=P(B\setminus (A\cap B))+P(A\cap B)\]
+sottraendo 
+\[P(B\setminus (A\cap B))\]
+da entrambe le equazioni otteniamo il risultato voluto.
+
 \subsection{Eventi equiprobabili}%
 \label{sub:Eventi equiprobabili}
 Sia $S$ lo \emph{spazio campionario} costituito da un insieme finito di $N$
@@ -71,3 +94,78 @@ La probabilità di un insieme $E\subseteq S$ in questo caso sarà:
     P(E)=\frac{\#E}{\#S}=\frac{365!}{365^{n-1}}
   \]
 \end{esercizio}
+
+\chapter{Probabilità condizionata e indipendenza}%
+\label{sec:Probabilità condizionata e indipendenza}
+Dati due eventi $E$ ed $F$ siamo interessati a calcolare la probabilità di $E$
+quando sappiamo che si è realizzato $F$.
+
+Sia $P(E|F)$ la probabilità di $E$ condizionata a $F$.
+\[
+  P(E|F)= \frac{P(EF)}{P(F)} 
+\]
+
+Si osservi che:
+\begin{itemize}
+  \item $0<P(E|F)<1$
+  \item $P(F|F)=1$
+  \item $E_i,E_j=0;P(\cup E_i|F)=\sum P(E_i|F)$
+\end{itemize}
+
+\paragraph{Regola di moltiplicazione}%
+\label{par:Regola di moltiplicazione}
+Iniziamo scrivendo:
+\[
+  P(E|F)= \frac{P(EF)}{P(F)}\Rightarrow P(EF)=P(E|F)P(F)
+\]
+
+Dati $E_1,E_2,E_3$
+\[
+  P(E_1 E_2 E_3)=P(E_1|E_2 E_3)P(E_2 E_3)
+\]
+\[
+  P(E_1 E_2 E_3)=P(E_1|E_2 E_3)P(E_2|E_3)P(E_3)
+\]
+
+\section{Teorema di Bayes}%
+\label{sec:Teorema di Bayes}
+\[
+  P(E|F)= \frac{P(F|E)P(E)}{P(F)} 
+\]
+
+Formula della probabilità assoluta:
+\[
+  P(F)=P(F)P(E|F)+P(F^C)P(F|E^C)
+\]
+
+Da cui:
+\[
+  P(E|F)= \frac{P(F|E)P(E)}{P(F)P(E|F)+P(F^C)P(F|E^C)
+} 
+\]
+
+\subsection{Eventi indipendenti}%
+\label{sub:Eventi indipendenti}
+
+\section{Variabili casuali discrete}%
+\label{sec:Variabili casuali discrete}
+Sia $S$ lo spazio campionario, $X:\rightarrow\R$
+\[
+  (S,P)\xrightarrow[X](\R,\_)
+\]
+
+\begin{definizione}[Variabile causale (aleatoria)]
+  Discreta:
+  \[
+    X:S\rightarrow\{a_1,\dots,a_n\}\quad a_i\in\R\quad i=1,\dots,n
+  \]
+\end{definizione}
+
+\paragraph{Funzione di probabilità di massa}%
+\label{par:Funzione di probabilità di massa}
+
+\paragraph{Funzione di probabilità cumulata}%
+\label{par:Funzione di probabilità cumulata}
+
+\section{Variabili aleatorie discrete}%
+\label{sec:Variabili aleatorie discrete}

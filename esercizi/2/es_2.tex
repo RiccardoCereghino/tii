@@ -1,0 +1,80 @@
+\documentclass{article}
+\begin{document}
+\title{Homework 2}
+\author{Riccardo Cereghino - S4651066}
+\date{25-3-2020}
+\maketitle
+
+\paragraph{2.1}%
+\label{par:2.1}
+$(i)$ La proprietà segue dal fatto che $E^CE=\emptyset$ e $E^C\cup E=S$, quindi
+$P(E)+P(E^C)=1$.
+
+$(ii)$ La proprietà si dimostra notando che $P(EF)=P(E)$ che si può scrivere
+come $F=E\cup E^CF$, da cui possiamo derivare $P(F)=P(E)+\frac{P(E^C F}{\geq0}$.
+
+ $(iii)$
+\[P(A\cup B)=P(A)+P(B)-P(A\cap B)\]
+In primo luogo,
+
+\[P(A\cup B)=P(A)+P(B\setminus A)\]
+ (per il terzo Assioma), quindi,
+\[P(A\cup B)=P(A)+P(B\setminus (A\cap B))\]
+perché
+ \[B\setminus A=B\setminus (A\cap B)\]
+E,
+\[P(B)=P(B\setminus (A\cap B))+P(A\cap B)\]
+sottraendo 
+\[P(B\setminus (A\cap B))\]
+da entrambe le equazioni otteniamo il risultato voluto.
+
+\paragraph{2.2}%
+\label{par:2.2}
+\[C(3,10)= \frac{10!}{3!7!}=120 \]
+\[C(2,5)= \frac{5!}{2!3!}=10 \]
+\[C_{TOT}=120*10=1200\]
+
+\paragraph{2.3}%
+\label{par:2.3}
+\subparagraph{Poker}%
+\label{subp:Poker}
+\textbf{Casi possibili:} $C(5,52)^ 2598960$
+
+\textbf{Casi favorevoli:} $13\times48=624$ dove $13$ dei tipi
+possibili e $48$ sono le possibili quinte carte rimanenti.
+
+\[P= \frac{624}{2598960}=0.024\%\]
+
+\subparagraph{Scala reale}%
+\label{subp:Scala reale}
+\textbf{Casi possibili:} $C(5,52)^ 2598960$
+
+\textbf{Casi favorevoli:} $4\times10=40$ dove $4$ è il numero di semi e 
+$10$ il numero di progressioni possibili.
+
+\[P= \frac{40}{2598960}=0.0015\%\]
+
+\paragraph{2.4}%
+\label{par:2.4}
+Calcolo la probabilità di ottenere $3$ palline pari su $30$
+\textbf{Casi possibili:} $C(30,3)= \frac{30!}{3!27!} = 4060$
+\textbf{Casi favorevoli:} $C(15,3) \frac{15!}{3!12!} = 455$
+$P_1=13/116$
+
+Calcolo la probabilità di ottenere $4$ palline minori di $10$
+\textbf{Casi possibili:} $C(27,4)= 17550$
+\textbf{Casi favorevoli:} $C(9,4) = 126$
+$P_2=7/975$
+
+Quindi calcolo la probabilità totale considerando che dovrò togliere i casi
+ripetuti, ovvero $4/30$
+\[P(E)=P_1+P_2-2/15=xxx\]
+
+
+\paragraph{2.5}%
+\label{par:2.5}
+\textbf{Casi possibilie}: $C(10,2)= 45$
+\textbf{Casi favorevoli:} $C(6,1) C(4,1)= 24$
+
+$P_{TOT}=24/45$
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\begin{document}
+\paragraph{2.1}%
+\label{par:2.1}
+$(i)$ La proprietà segue dal fatto che $E^CE=\emptyset$ e $E^C\cup E=S$, quindi
+$P(E)+P(E^C)=1$.
+
+$(ii)$ La proprietà si dimostra notando che $P(EF)=P(E)$ che si può scrivere
+come $F=E\cup E^CF$, da cui possiamo derivare $P(F)=P(E)+\frac{P(E^C F}{\geq0}$.
+
+ $(iii)$
+\[P(A\cup B)=P(A)+P(B)-P(A\cap B)\]
+In primo luogo,
+
+\[P(A\cup B)=P(A)+P(B\setminus A)\]
+ (per il terzo Assioma), quindi,
+\[P(A\cup B)=P(A)+P(B\setminus (A\cap B))\]
+perché
+ \[B\setminus A=B\setminus (A\cap B)\]
+E,
+\[P(B)=P(B\setminus (A\cap B))+P(A\cap B)\]
+sottraendo 
+\[P(B\setminus (A\cap B))\]
+da entrambe le equazioni otteniamo il risultato voluto.
+
+\paragraph{2.2}%
+\label{par:2.2}
+\[C(3,10)= \frac{10!}{3!7!}=120 \]
+\[C(2,5)= \frac{5!}{2!3!}=10 \]
+\[C_{TOT}=120*10=1200\]
+
+\paragraph{2.3}%
+\label{par:2.3}
+\subparagraph{Poker}%
+\label{subp:Poker}
+\textbf{Casi possibili:} $C(5,52)^ 2598960$
+
+\textbf{Casi favorevoli:} $13\times48=624$ dove $13$ dei tipi
+possibili e $48$ sono le possibili quinte carte rimanenti.
+
+\[P= \frac{624}{2598960}=0.024\%\]
+
+\subparagraph{Scala reale}%
+\label{subp:Scala reale}
+\textbf{Casi possibili:} $C(5,52)^ 2598960$
+
+\textbf{Casi favorevoli:} $4\times10=40$ dove $4$ è il numero di semi e 
+$10$ il numero di progressioni possibili.
+
+\[P= \frac{40}{2598960}=0.0015\%\]
+\end{document}
